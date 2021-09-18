@@ -33,8 +33,10 @@ class Human {
     public void setHuman() {
         Head golova = new Head("Brown", "Blue");
         System.out.println(golova);
+
         Legs nogi = new Legs("white", 100);
         System.out.println(nogi);
+
         Hands ruki = new Hands("white", "black");
         System.out.println(ruki);
     }
