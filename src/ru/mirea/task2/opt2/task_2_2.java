@@ -3,10 +3,7 @@ package ru.mirea.task2.opt2;
 public class task_2_2 {
      public static void main(String[] args) {
          Ball myach = new Ball (22.2, 44.4);
-         testBall test = new testBall();
-         test.Cout();
-         test.testMove();
-         test.Cout();
+         myach.test();
      }
 }
 
@@ -48,15 +45,20 @@ class Ball {
     public String toString() {
         return "Ball @(" + x + "," + y + ")";
     }
+    public void test () {
+        testBall test = new testBall(x,y);
+        test.Cout();
+        test.testMove();
+        test.Cout();
+    }
 }
 
 class testBall extends Ball{
-    private double x1;
-    private double x2;
-
-    public testBall() {
-        x1 = getX();
-        x2 = getY();
+    double x1;
+    double y1;
+    public testBall(double x, double y) {
+        x1 = x;
+        y1 = y;
     }
 
     public void Cout() {
