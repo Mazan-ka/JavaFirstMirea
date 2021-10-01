@@ -16,13 +16,13 @@ public class Task81 {
 }
 
 abstract class Shape {
-    protected String color;
+    protected Color color;
     protected int positionX;
     protected int positionY;
 }
 
 class Circle extends Shape {
-    public Circle (String color, int positionX, int positionY) {
+    public Circle (Color color, int positionX, int positionY) {
         this.color = color;
         this.positionX = positionX;
         this.positionY = positionY;
@@ -30,7 +30,7 @@ class Circle extends Shape {
 }
 
 class Rectangle extends Shape {
-    public Rectangle (String color, int positionX, int positionY) {
+    public Rectangle (Color color, int positionX, int positionY) {
         this.color = color;
         this.positionX = positionX;
         this.positionY = positionY;
@@ -38,10 +38,8 @@ class Rectangle extends Shape {
 }
 
 class Triangle extends Shape {
-    public Triangle (String color, int positionX, int positionY) {
+    public Triangle (Color color) {
         this.color = color;
-        this.positionX = positionX;
-        this.positionY = positionY;
     }
 }
 
@@ -69,18 +67,18 @@ class GUI extends JPanel {
         for (int i=0; i<20; i++) {
             switch ((int) (Math.random() * 3)) {
                 case (0):
-                    Circle krug = new Circle("black", (int) (Math.random() * 1000), (int) (Math.random() * 700));
-                    g.setColor(Color.getHSBColor((int) (Math.random() * 200), (int) (Math.random() * 200), (int) (Math.random() * 200)));
+                    Circle krug = new Circle(Color.getHSBColor((int) (Math.random() * 360), (int) (Math.random() * 200), (int) (Math.random() * 200)), (int) (Math.random() * 700), (int) (Math.random() * 700));
+                    g.setColor(krug.color);
                     g.drawOval(krug.positionX, krug.positionY, 100, 80);
                     break;
                 case (1):
-                    Rectangle treug = new Rectangle("black", (int) (Math.random() * 1000), (int) (Math.random() * 700));
-                    g.setColor(Color.getHSBColor((int) (Math.random() * 200), (int) (Math.random() * 200), (int) (Math.random() * 200)));
+                    Rectangle treug = new Rectangle(Color.getHSBColor((int) (Math.random() * 500), (int) (Math.random() * 500), (int) (Math.random() * 500)), (int) (Math.random() * 700), (int) (Math.random() * 700));
+                    g.setColor(treug.color);
                     g.drawRect(treug.positionX, treug.positionY, 100, 80);
                     break;
                 case (2):
-                    Triangle triug = new Triangle("black", (int) (Math.random() * 400), (int) (Math.random() * 100));
-                    g.setColor(Color.getHSBColor((int) (Math.random() * 100), (int) (Math.random() * 100), (int) (Math.random() * 100)));
+                    Triangle triug = new Triangle(Color.getHSBColor((int) (Math.random() * 800), (int) (Math.random() * 800), (int) (Math.random() * 800)));
+                    g.setColor(triug.color);
                     int x1 = (int) (Math.random() * 400);
                     int y1 = (int) (Math.random() * 400);
                     int x2 = (int) (Math.random() * 400);
@@ -94,9 +92,5 @@ class GUI extends JPanel {
                     break;
             }
         }
-        int k = (int)(Math.random()*10);
-        Circle krug = new Circle("black", 40, 60);
-        g.setColor(Color.black);
-        g.drawOval((int)(Math.random()*100), (int)(Math.random()*100), 100, 80);
     }
 }
