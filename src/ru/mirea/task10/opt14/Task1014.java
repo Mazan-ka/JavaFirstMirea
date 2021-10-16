@@ -12,7 +12,6 @@ public class Task1014 {
             k += res;
         }
         else return num;
-        //System.out.print(num + " ");
         return k;
     }
 
