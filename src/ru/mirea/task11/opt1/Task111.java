@@ -34,7 +34,7 @@ public class Task111 {
             if (!finished) {
                 int number = Integer.parseInt(numberField.getText());
                 if (number == generatedRandomNumber) {
-                    guessingResultLabel.setText("Поздравляем, вы угадали текст!");
+                    guessingResultLabel.setText("Поздравляем, вы угадали!");
                     finished = true;
                 } else {
                     if (number > generatedRandomNumber) {

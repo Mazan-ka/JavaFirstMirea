@@ -46,12 +46,12 @@ public class Task112 {
         setMouseListener(eastPanel, "EAST");
 
         centerPanel.setPreferredSize(new Dimension(STANDARD_WIDTH, STANDARD_HEIGHT));
-        northPanel.setPreferredSize(new Dimension(STANDARD_WIDTH, STANDARD_HEIGHT / 2));
-        southPanel.setPreferredSize(new Dimension(STANDARD_WIDTH, STANDARD_HEIGHT / 2));
-        westPanel.setPreferredSize(new Dimension(STANDARD_WIDTH / 2, STANDARD_HEIGHT));
-        eastPanel.setPreferredSize(new Dimension(STANDARD_WIDTH / 2, STANDARD_HEIGHT));
+        northPanel.setPreferredSize(new Dimension(STANDARD_WIDTH, STANDARD_HEIGHT/2));
+        southPanel.setPreferredSize(new Dimension(STANDARD_WIDTH, STANDARD_HEIGHT/2));
+        westPanel.setPreferredSize(new Dimension(STANDARD_WIDTH/2, STANDARD_HEIGHT));
+        eastPanel.setPreferredSize(new Dimension(STANDARD_WIDTH/2, STANDARD_HEIGHT));
 
-        centerPanel.setBackground(Color.CYAN);
+        centerPanel.setBackground(Color.BLACK);
         northPanel.setBackground(Color.BLUE);
         southPanel.setBackground(Color.YELLOW);
         westPanel.setBackground(Color.GREEN);
